@@ -1,0 +1,131 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+        flex: 2;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-color: var(--themeColor);
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        padding-left: 42px;
+
+        .iconfont {
+            font-size: 42px;
+            padding-left: 8px;
+            vertical-align: middle;
+        }
+    }
+
+    .container {
+        flex: 9;
+        align-items: center;
+        // background: skyblue;
+        width: 1200px;
+        margin: 0 auto;
+
+        .title,.item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            span{
+                flex:1;
+                
+            }
+
+            .idCard{
+                flex:3;
+            }
+
+            .phone{
+                flex:2;
+            }
+        }
+
+        .title{
+            height:48px;
+            font-weight:700;
+            margin:12px 0 16px 0;
+         
+        }
+
+        .item{
+           
+            span{
+                padding:12px 0;
+                border: #000 0.5px solid;
+                border-collapse: collapse;
+                
+            }
+
+            .edi{
+                color: rgb(27, 186, 239);
+                cursor: pointer;
+
+                &:hover{
+                    color: var(--themeColor);
+                }
+            }
+            .del{
+                color: red;
+                cursor: pointer;
+
+                &:hover{
+                    color: rgb(180, 1, 1)
+                }
+            }
+
+        }
+        .tableContainer{
+            margin-bottom: 36px;
+        }
+        .pagination{
+            float:left;
+        }
+
+        .op{
+            float: right;
+
+            span{
+                display: inline-block;
+                width:120px;
+                height:38px;
+                border-radius: 8px;
+                text-align: center;
+                line-height: 38px;
+                color:#fff;
+            }
+
+            .plDelete{
+                background-color: rgb(232, 232, 232);
+                color:#000;
+
+                &:hover{
+                    background-color: rgb(180, 1, 1);
+                    color:#fff;
+                }
+            }
+
+            .addPatient{
+                background: var(--themeColor);
+                margin-left: 12px;
+
+                &:hover{
+                    background: rgb(101, 216, 255);
+                    color:#000;
+                }
+            }
+        }
+        
+       
+    }
+
+
+}
