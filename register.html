@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录页面-医院管理系统</title>
+    <title>注册页面-医院管理系统</title>
     <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
@@ -17,8 +17,8 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/register.js"></script>
 </head>
 
 <body>
@@ -29,8 +29,8 @@
         </div>
     </div>
     <div class="rightContainer">
-        <div class="register">
-            没有账号？<span>去注册</span>
+        <div class="login">
+            已有账号？<span>去登录</span>
         </div>
         <form action="post">
             <div class="item">
@@ -38,11 +38,19 @@
                 <input type="text" id="userID" placeholder="userID">
             </div>
             <div class="item">
+                <label for="userPhone">手机号</label>
+                <input type="text" id="userPhone" placeholder="telephone">
+            </div>
+            <div class="item">
                 <label for="password">密码</label>
                 <input type="password" id="password" placeholder="password">
             </div>
             <div class="item">
-                <button type="button" title="submit" id="submit">登录</button>
+                <label for="checkPassword">确认密码</label>
+                <input type="password" id="checkPassword" placeholder="checkPassword">
+            </div>
+            <div class="item">
+                <button type="button" title="submit" id="submit">注册</button>
             </div>
         </form>
     </div>

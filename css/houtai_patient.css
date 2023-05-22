@@ -1,0 +1,106 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .header {
+  flex: 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding-left: 42px;
+}
+body .header .iconfont {
+  font-size: 42px;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+body .container {
+  flex: 9;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+body .container .title,
+body .container .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+body .container .title span,
+body .container .item span {
+  flex: 1;
+}
+body .container .title .idCard,
+body .container .item .idCard {
+  flex: 3;
+}
+body .container .title .phone,
+body .container .item .phone {
+  flex: 2;
+}
+body .container .title {
+  height: 48px;
+  font-weight: 700;
+  margin: 12px 0 16px 0;
+}
+body .container .item span {
+  padding: 12px 0;
+  border: #000 0.5px solid;
+  border-collapse: collapse;
+}
+body .container .item .edi {
+  color: #1bbaef;
+  cursor: pointer;
+}
+body .container .item .edi:hover {
+  color: var(--themeColor);
+}
+body .container .item .del {
+  color: red;
+  cursor: pointer;
+}
+body .container .item .del:hover {
+  color: #b40101;
+}
+body .container .tableContainer {
+  margin-bottom: 36px;
+}
+body .container .pagination {
+  float: left;
+}
+body .container .op {
+  float: right;
+}
+body .container .op span {
+  display: inline-block;
+  width: 120px;
+  height: 38px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 38px;
+  color: #fff;
+}
+body .container .op .plDelete {
+  background-color: #e8e8e8;
+  color: #000;
+}
+body .container .op .plDelete:hover {
+  background-color: #b40101;
+  color: #fff;
+}
+body .container .op .addPatient {
+  background: var(--themeColor);
+  margin-left: 12px;
+}
+body .container .op .addPatient:hover {
+  background: #65d8ff;
+  color: #000;
+}
