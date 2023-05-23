@@ -10,6 +10,8 @@ body {
         display: flex;
         justify-content: start;
         align-items: center;
+        flex-shrink: none;
+        flex-grow: none;
         background-color: var(--themeColor);
         color: #fff;
         text-align: center;
@@ -24,107 +26,261 @@ body {
     }
 
     .container {
+        display: flex;
+
         flex: 9;
         align-items: center;
-        // background: skyblue;
         width: 1200px;
         margin: 0 auto;
 
-        .title,.item{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            span{
-                flex:1;
-                
-            }
+        .wrap {
+            width: 1200px;
+            // display: none;
 
-            .idCard{
-                flex:3;
-            }
-
-            .phone{
-                flex:2;
-            }
-        }
-
-        .title{
-            height:48px;
-            font-weight:700;
-            margin:12px 0 16px 0;
-         
-        }
-
-        .item{
-           
-            span{
-                padding:12px 0;
-                border: #000 0.5px solid;
-                border-collapse: collapse;
-                
-            }
-
-            .edi{
-                color: rgb(27, 186, 239);
-                cursor: pointer;
-
-                &:hover{
-                    color: var(--themeColor);
-                }
-            }
-            .del{
-                color: red;
-                cursor: pointer;
-
-                &:hover{
-                    color: rgb(180, 1, 1)
-                }
-            }
-
-        }
-        .tableContainer{
-            margin-bottom: 36px;
-        }
-        .pagination{
-            float:left;
-        }
-
-        .op{
-            float: right;
-
-            span{
-                display: inline-block;
-                width:120px;
-                height:38px;
-                border-radius: 8px;
+            .title,
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 text-align: center;
-                line-height: 38px;
-                color:#fff;
-            }
 
-            .plDelete{
-                background-color: rgb(232, 232, 232);
-                color:#000;
+                span {
+                    flex: 1;
 
-                &:hover{
-                    background-color: rgb(180, 1, 1);
-                    color:#fff;
+                }
+
+                .idCard {
+                    flex: 3;
+                }
+
+                .phone {
+                    flex: 2;
                 }
             }
 
-            .addPatient{
-                background: var(--themeColor);
-                margin-left: 12px;
+            .title {
+                height: 48px;
+                font-weight: 700;
+                margin: 12px 0 16px 0;
 
-                &:hover{
-                    background: rgb(101, 216, 255);
-                    color:#000;
+            }
+
+            .item {
+
+                span {
+                    padding: 12px 0;
+                    border: #000 0.5px solid;
+                    border-collapse: collapse;
+
+                }
+
+                .edi {
+                    color: rgb(27, 186, 239);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--themeColor);
+                    }
+                }
+
+                .del {
+                    color: red;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: rgb(180, 1, 1)
+                    }
+                }
+
+            }
+
+            .tableContainer {
+                margin-bottom: 36px;
+            }
+
+            .pagination {
+                float: left;
+            }
+
+            .op {
+                float: right;
+
+                span {
+                    display: inline-block;
+                    width: 120px;
+                    height: 38px;
+                    border-radius: 8px;
+                    text-align: center;
+                    line-height: 38px;
+                    color: #fff;
+                }
+
+                .plDelete {
+                    background-color: rgb(232, 232, 232);
+                    color: #000;
+
+                    &:hover {
+                        background-color: rgb(180, 1, 1);
+                        color: #fff;
+                    }
+                }
+
+                .addPatient {
+                    background: var(--themeColor);
+                    margin-left: 12px;
+
+                    &:hover {
+                        background: rgb(101, 216, 255);
+                        color: #000;
+                    }
                 }
             }
         }
-        
-       
+
+
+    }
+
+    .mask {
+        // display: block;
+        display: none;
+        background-color: #00000030;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .editView {
+        // display: flex;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+
+        width: 742px;
+        height: 540px;
+        background: rgb(0, 48, 78);
+        margin: auto;
+        border-radius: 10px;
+
+        // box-shadow: 0 0 10px #fff;
+
+
+        .section {
+            width: 100%;
+            height: 100%;
+
+            // background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            text-align: left;
+            box-sizing: border-box;
+            color: #fff;
+
+            div {
+                margin: 8px 0px;
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    width: 300px;
+                    height: 32px;
+                    background: transparent;
+                    color: #fff;
+                    padding-left: 12px;
+                    margin: 4px 0 8px 0;
+                    border: 1px solid #ccc;
+                    font-size: 14px;
+                    border-radius: 5px;
+
+                    &:focus {
+                        outline: none;
+                        border: 2px solid var(--themeColor);
+                    }
+                    
+                }
+
+                input::-webkit-input-placeholder{
+
+                    color:#ccc;
+                  
+                  }
+                  
+                  input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+                  
+                    color:#ccc;
+                  
+                  }
+                  
+                  input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+                  
+                    color:#ccc;
+                  
+                  }
+                  
+                  input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+                  
+                    color:#ccc;
+                  
+                  }
+
+                #yid {
+                    background: #313847;
+                }
+
+                
+
+                button {
+                    width: 152px;
+                    height: 38px;
+
+                    border: none;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin: 20px 0;
+
+                    &:last-child {
+                        margin-left: 4px;
+                    }
+
+
+                }
+
+             
+                .cancel {
+                    background-color: rgb(232, 232, 232);
+                    color: #000;
+
+                    &:hover {
+                        background-color: rgb(180, 1, 1);
+                        color: #fff;
+                    }
+                }
+
+                .ok {
+                    background: var(--themeColor);
+                    margin-left: 12px;
+
+                    &:hover {
+                        background: rgb(101, 216, 255);
+                        color: #000;
+                    }
+                }
+
+            }
+        }
+
+
     }
 
 

@@ -10,6 +10,8 @@ body .header {
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-shrink: none;
+  flex-grow: none;
   background-color: var(--themeColor);
   color: #fff;
   text-align: center;
@@ -22,64 +24,68 @@ body .header .iconfont {
   vertical-align: middle;
 }
 body .container {
+  display: flex;
   flex: 9;
   align-items: center;
   width: 1200px;
   margin: 0 auto;
 }
-body .container .title,
-body .container .item {
+body .container .wrap {
+  width: 1200px;
+}
+body .container .wrap .title,
+body .container .wrap .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
-body .container .title span,
-body .container .item span {
+body .container .wrap .title span,
+body .container .wrap .item span {
   flex: 1;
 }
-body .container .title .idCard,
-body .container .item .idCard {
+body .container .wrap .title .idCard,
+body .container .wrap .item .idCard {
   flex: 3;
 }
-body .container .title .phone,
-body .container .item .phone {
+body .container .wrap .title .phone,
+body .container .wrap .item .phone {
   flex: 2;
 }
-body .container .title {
+body .container .wrap .title {
   height: 48px;
   font-weight: 700;
   margin: 12px 0 16px 0;
 }
-body .container .item span {
+body .container .wrap .item span {
   padding: 12px 0;
   border: #000 0.5px solid;
   border-collapse: collapse;
 }
-body .container .item .edi {
+body .container .wrap .item .edi {
   color: #1bbaef;
   cursor: pointer;
 }
-body .container .item .edi:hover {
+body .container .wrap .item .edi:hover {
   color: var(--themeColor);
 }
-body .container .item .del {
+body .container .wrap .item .del {
   color: red;
   cursor: pointer;
 }
-body .container .item .del:hover {
+body .container .wrap .item .del:hover {
   color: #b40101;
 }
-body .container .tableContainer {
+body .container .wrap .tableContainer {
   margin-bottom: 36px;
 }
-body .container .pagination {
+body .container .wrap .pagination {
   float: left;
 }
-body .container .op {
+body .container .wrap .op {
   float: right;
 }
-body .container .op span {
+body .container .wrap .op span {
   display: inline-block;
   width: 120px;
   height: 38px;
@@ -88,19 +94,121 @@ body .container .op span {
   line-height: 38px;
   color: #fff;
 }
-body .container .op .plDelete {
+body .container .wrap .op .plDelete {
   background-color: #e8e8e8;
   color: #000;
 }
-body .container .op .plDelete:hover {
+body .container .wrap .op .plDelete:hover {
   background-color: #b40101;
   color: #fff;
 }
-body .container .op .addPatient {
+body .container .wrap .op .addPatient {
   background: var(--themeColor);
   margin-left: 12px;
 }
-body .container .op .addPatient:hover {
+body .container .wrap .op .addPatient:hover {
+  background: #65d8ff;
+  color: #000;
+}
+body .mask {
+  display: none;
+  background-color: #00000030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body .editView {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 742px;
+  height: 540px;
+  background: #00304e;
+  margin: auto;
+  border-radius: 10px;
+}
+body .editView .section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: left;
+  box-sizing: border-box;
+  color: #fff;
+}
+body .editView .section div {
+  margin: 8px 0px;
+}
+body .editView .section div label {
+  font-size: 14px;
+}
+body .editView .section div input {
+  width: 300px;
+  height: 32px;
+  background: transparent;
+  color: #fff;
+  padding-left: 12px;
+  margin: 4px 0 8px 0;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 5px;
+}
+body .editView .section div input:focus {
+  outline: none;
+  border: 2px solid var(--themeColor);
+}
+body .editView .section div input::-webkit-input-placeholder {
+  color: #ccc;
+}
+body .editView .section div input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+}
+body .editView .section div input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+}
+body .editView .section div input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ccc;
+}
+body .editView .section div #yid {
+  background: #313847;
+}
+body .editView .section div button {
+  width: 152px;
+  height: 38px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+body .editView .section div button:last-child {
+  margin-left: 4px;
+}
+body .editView .section div .cancel {
+  background-color: #e8e8e8;
+  color: #000;
+}
+body .editView .section div .cancel:hover {
+  background-color: #b40101;
+  color: #fff;
+}
+body .editView .section div .ok {
+  background: var(--themeColor);
+  margin-left: 12px;
+}
+body .editView .section div .ok:hover {
   background: #65d8ff;
   color: #000;
 }
