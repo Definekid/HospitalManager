@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .header {
+  flex: 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding-left: 42px;
+}
+body .header .iconfont {
+  font-size: 42px;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+body .container {
+  flex: 9;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+body .container .wrap {
+  width: 1200px;
+}
+body .container .wrap .title,
+body .container .wrap .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+body .container .wrap .title span,
+body .container .wrap .item span {
+  flex: 1;
+}
+body .container .wrap .title .zdId,
+body .container .wrap .item .zdId {
+  flex: 3;
+}
+body .container .wrap .title .phone,
+body .container .wrap .item .phone {
+  flex: 2;
+}
+body .container .wrap .title {
+  height: 48px;
+  font-weight: 700;
+  margin: 12px 0 16px 0;
+}
+body .container .wrap .item span {
+  padding: 12px 0;
+  border-bottom: #000 0.5px solid;
+  border-collapse: collapse;
+}
+body .container .wrap .item .detail {
+  color: #1bbaef;
+  cursor: pointer;
+}
+body .container .wrap .item .detail:hover {
+  color: var(--themeColor);
+}
+body .container .wrap .tableContainer {
+  margin-bottom: 36px;
+}
+body .container .wrap .pagination {
+  float: left;
+}
+body .container .wrap .op {
+  float: right;
+}
+body .container .wrap .op span {
+  display: inline-block;
+  width: 120px;
+  height: 38px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 38px;
+  color: #fff;
+}
+body .container .wrap .op .plDelete {
+  background-color: #e8e8e8;
+  color: #000;
+}
+body .container .wrap .op .plDelete:hover {
+  background-color: #b40101;
+  color: #fff;
+}
+body .container .wrap .op .addPatient {
+  background: var(--themeColor);
+  margin-left: 12px;
+}
+body .container .wrap .op .addPatient:hover {
+  background: #65d8ff;
+  color: #000;
+}

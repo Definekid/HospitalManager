@@ -1,0 +1,144 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+        flex: 2;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-color: var(--themeColor);
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        padding-left: 42px;
+
+        .iconfont {
+            font-size: 42px;
+            padding-left: 8px;
+            vertical-align: middle;
+        }
+    }
+
+    .container {
+        flex: 9;
+        align-items: center;
+        // background: skyblue;
+        width: 1200px;
+        margin: 24px auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .wrap {
+            width: 1200px;
+
+            &>div {
+                width:1200px;
+                box-sizing: border-box;
+                padding: 18px;
+                border-bottom:1px #ccc solid;
+                span {
+                    &:first-child {
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .info1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &>div {
+                    flex: 1;
+                }
+
+                .idCard {
+                    flex: 3;
+                }
+            }
+
+            .info2 {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+             
+
+                div {
+                    flex: 1;
+                }
+            }
+
+
+
+            .chufang {
+                width: 100%;
+               
+                color: #000;
+       
+                border-top: 1px #ccc solid;
+        
+                .chufangContainer {
+                    width: 100%;
+                    font-weight: 400;
+                    // display: flex;
+                    // justify-content: flex-start;
+                    // align-items: space-between;
+                    // flex-direction: column;
+                    &>div {
+                        width: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 12px 120px;
+                        border-bottom: 1px #f3f3f3 solid;
+                        .name {
+                            flex: 1;
+                        }
+
+                        .num {
+                            flex: 1;
+                        }
+                    }
+
+                    .title {
+                        font-weight: 800;
+                    }
+
+                    .yao_item {
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .feiyong {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                div{
+                    margin-top:8px;
+                    margin-right:36px;
+                    span{
+                        &:last-child{
+                            font-size:14px;
+                        }
+                    }
+                }
+
+               
+
+                .jiaofeizhuangtai {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+
+}
