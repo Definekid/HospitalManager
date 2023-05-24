@@ -1,0 +1,91 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .header {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 0 42px;
+}
+body .header .iconfont {
+  font-size: 42px;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+body .header form input {
+  font-size: 14px;
+  width: 250px;
+}
+body .header form .btn {
+  color: #000;
+  background: #fff;
+}
+body .header form .btn:hover {
+  background-color: #ccc;
+}
+body .container {
+  flex: 9;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+body .container .wrap {
+  width: 1200px;
+}
+body .container .wrap .title,
+body .container .wrap .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+body .container .wrap .title span,
+body .container .wrap .item span {
+  flex: 1;
+}
+body .container .wrap .title .zdId,
+body .container .wrap .item .zdId {
+  flex: 3;
+}
+body .container .wrap .title .phone,
+body .container .wrap .item .phone {
+  flex: 2;
+}
+body .container .wrap .title {
+  height: 48px;
+  font-weight: 700;
+  margin: 12px 0 16px 0;
+}
+body .container .wrap .item span {
+  padding: 12px 0;
+  border-bottom: #000 0.5px solid;
+  border-collapse: collapse;
+}
+body .container .wrap .item .modify,
+body .container .wrap .item .detail {
+  color: #1bbaef;
+  cursor: pointer;
+  text-decoration: underline;
+}
+body .container .wrap .item .modify:hover,
+body .container .wrap .item .detail:hover {
+  color: var(--themeColor);
+}
+body .container .wrap .tableContainer {
+  margin-bottom: 36px;
+}
+body .container .wrap .pagination {
+  float: left;
+}
+body .container .wrap .op {
+  float: right;
+}

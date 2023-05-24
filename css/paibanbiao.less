@@ -1,0 +1,53 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--themeColor);
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        padding: 0 42px;
+
+        .iconfont {
+            font-size: 42px;
+            padding-left: 8px;
+            vertical-align: middle;
+        }
+
+        form {
+            input {
+                font-size: 14px;
+                width: 250px;
+
+            }
+
+            .btn {
+                color: #000;
+                background: #fff;
+
+                &:hover {
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+
+    .container {
+        flex: 9;
+        align-items: center;
+        // background: skyblue;
+        width: 1200px;
+        margin:  40px auto;
+        
+    }
+
+
+}

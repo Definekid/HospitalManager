@@ -4,10 +4,10 @@ window.onload = function () {
     var zddan = $(".rukou_zddan")[0];
 
     paibanbiao.addEventListener("click", function () {
-        window.location.href = "patient_history.html";
+        window.location.href = "paibanbiao.html";
     })
     zddan.addEventListener("click", function () {
-        window.location.href = "patient_guahao.html";
+        window.location.href = "doctor_getpatienthis.html";
     })
    
 }

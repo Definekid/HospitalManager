@@ -1,0 +1,188 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .header {
+        flex: 2;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-shrink: none;
+        flex-grow: none;
+        background-color: var(--themeColor);
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        padding-left: 42px;
+        flex-grow: none;
+        flex-shrink: none;
+
+        .iconfont {
+            font-size: 42px;
+            padding-left: 8px;
+            vertical-align: middle;
+        }
+    }
+
+
+    .conditions {
+        flex: 1;
+        height: 100%;
+        width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .choice1 {
+            flex: 4;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+
+
+            div {
+                width: 120px;
+                margin-left: 32px;
+                background-color: rgb(233, 233, 233);
+                text-align: center;
+                line-height: 30px;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color:var(--themeColor);
+                    color: rgb(0, 0, 0);
+                    box-shadow: #ccc 0 0 10px;
+                }
+
+            }
+
+            .y {
+                background-color: var(--themeColor);
+                color: #fff;
+            }
+        }
+
+        .choice2 {
+            flex: 6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &>div{
+                flex:1;
+                text-align: center;
+            }
+            &>select{
+                flex:3;
+            }
+        }
+
+    }
+
+    .container {
+        flex: 8;
+        flex-grow: none;
+        flex-shrink: none;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        // flex-flow: column;
+        &::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+            // border-radius: 50%;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: skyblue;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: var(--themeColor);
+        }
+
+
+        .wrap {
+            width: 1200px;
+    
+
+            &>section {
+                border-bottom: 1px #ccc solid;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                padding:8px 0;
+
+                .title {
+                    flex: 1;
+                    font-size: 18px;
+                    width: 150px;
+                    flex-shrink: none;
+                }
+
+                .cardcon {
+                    flex: 6;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: space-between;
+                    flex-wrap: wrap;
+                    .card {
+                        width: 30%;
+                        margin: 0 16px;
+                        flex-shrink: none;
+
+                        .imgcenter{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        p:last-child{
+                            float: right;
+                            width:100px;
+                            height:32px;
+                            padding-top: 0px;
+                            background: #f1f1f1;
+                            line-height: 32px;
+                           border-radius: 4px;
+                           margin-bottom: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:hover{
+                                background: #ccc;
+                                box-shadow: #ccc 0 0 10px;
+                            }
+
+                            small{
+                                display: inline-block;
+                                color:#fff;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .top{
+                display: none;
+            }
+
+        }
+
+    }
+
+
+}
