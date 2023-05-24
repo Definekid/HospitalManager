@@ -105,6 +105,11 @@ window.onload = function () {
         var yphone = editView.querySelector("#yphone");
         var yage = editView.querySelector("#yage")
 
+        yid.value = "";
+        yname.value = "";
+        ysex.value= "";
+        yphone.value = "";
+        yage.value = "";
 
         yid.disabled = false;
         yid.style.background = 'transparent'
@@ -137,7 +142,7 @@ window.onload = function () {
             sex.innerHTML = ysex.value;
             phone.innerHTML = yphone.value;
             age.innerHTML = yage.value;
-    
+
 
 
             $('.tableContainer')[0].prepend(doctor);

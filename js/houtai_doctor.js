@@ -110,7 +110,7 @@ window.onload = function () {
 
 
         yid.disabled = false;
-        yid.style.background = 'transparent'
+        yid.style.background = 'transparent';
         //获取弹窗中的取消按钮
         var cancel = editView.querySelector(".cancel");
         cancel.addEventListener("click", function () {
