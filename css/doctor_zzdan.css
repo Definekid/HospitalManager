@@ -1,0 +1,150 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .header {
+  flex: 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding-left: 42px;
+}
+body .header .iconfont {
+  font-size: 42px;
+  padding-left: 8px;
+  vertical-align: middle;
+}
+body .container {
+  flex: 9;
+  align-items: center;
+  width: 100%;
+  margin: 24px auto;
+  overflow: auto;
+}
+body .container::-webkit-scrollbar-track {
+  margin-left: 16px;
+  background-color: #f1f1f1;
+}
+body .container::-webkit-scrollbar {
+  margin-left: 16px;
+  width: 4px;
+  background-color: skyblue;
+}
+body .container::-webkit-scrollbar-thumb {
+  margin-left: 16px;
+  border-radius: 10px;
+  background-color: var(--themeColor);
+}
+body .container .wrap {
+  width: 1200px;
+}
+body .container .wrap > div {
+  width: 1200px;
+  box-sizing: border-box;
+  padding: 18px;
+  border-bottom: 1px #ccc solid;
+}
+body .container .wrap > div span:first-child {
+  color: #000;
+  font-weight: bold;
+}
+body .container .wrap .info1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .wrap .info1 > div {
+  flex: 1;
+}
+body .container .wrap .info1 .idCard {
+  flex: 3;
+}
+body .container .wrap .info2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .wrap .info2 div {
+  flex: 1;
+}
+body .container .wrap .chufang {
+  width: 100%;
+  color: #000;
+  border-top: 1px #ccc solid;
+}
+body .container .wrap .chufang .chufangContainer {
+  width: 100%;
+  font-weight: 400;
+}
+body .container .wrap .chufang .chufangContainer > div {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 120px;
+  border-bottom: 1px #f3f3f3 solid;
+}
+body .container .wrap .chufang .chufangContainer > div .name {
+  flex: 1;
+}
+body .container .wrap .chufang .chufangContainer > div .num {
+  flex: 1;
+}
+body .container .wrap .chufang .chufangContainer .title {
+  font-weight: 800;
+}
+body .container .wrap .chufang .chufangContainer .yao_item span {
+  font-weight: 400;
+}
+body .container .wrap .chufang .btn {
+  width: 120px;
+  float: right;
+  background-color: var(--themeColor);
+}
+body .container .wrap .chufang .btn:hover {
+  background-color: #00a4e5;
+}
+body .container .wrap .deseaseDetail {
+  width: 100%;
+}
+body .container .wrap .deseaseDetail .deseaseText {
+  width: 100%;
+  height: 100%;
+  border: 1px #ccc solid;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  resize: none;
+}
+body .container .wrap .deseaseDetail .deseaseText:hover {
+  border: 1px var(--themeColor) solid;
+}
+body .container .wrap .deseaseDetail .deseaseText:focus {
+  outline: none;
+  border: 1px var(--themeColor) solid;
+}
+body .container #days {
+  text-align: right;
+}
+body .container .feiyong {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .container .feiyong div {
+  margin-top: 8px;
+  margin-right: 36px;
+}
+body .container .feiyong div span:last-child {
+  font-size: 14px;
+}
+body .container .feiyong .jiaofeizhuangtai {
+  margin-top: 4px;
+}

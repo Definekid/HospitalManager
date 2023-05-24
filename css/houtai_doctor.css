@@ -99,11 +99,11 @@ body .container .wrap .op .plDelete:hover {
   background-color: #b40101;
   color: #fff;
 }
-body .container .wrap .op .addPatient {
+body .container .wrap .op .addDoctor {
   background: var(--themeColor);
   margin-left: 12px;
 }
-body .container .wrap .op .addPatient:hover {
+body .container .wrap .op .addDoctor:hover {
   background: #65d8ff;
   color: #000;
 }

@@ -92,4 +92,61 @@ window.onload = function () {
         })
     })
 
+    var addPatient = $(".addPatient")[0];
+    addPatient.addEventListener("click", function () {
+        //弹窗显示和修改
+        mask.style.display = "block";
+        editView.style.display = "block";
+
+        //获取弹窗中的各项
+        var yid = editView.querySelector("#yid");
+        var yname = editView.querySelector("#yname");
+        var ysex = editView.querySelector("#ysex");
+        var yphone = editView.querySelector("#yphone");
+        var yage = editView.querySelector("#yage")
+
+
+        yid.disabled = false;
+        yid.style.background = 'transparent'
+        //获取弹窗中的取消按钮
+        var cancel = editView.querySelector(".cancel");
+        cancel.addEventListener("click", function () {
+            mask.style.display = "none";
+            editView.style.display = "none";
+        })
+
+        //获取弹窗中的确定按钮
+        var ok = editView.querySelector(".ok");
+        ok.addEventListener("click", function () {
+
+            //添加节点
+            var doctor = $(".tableContainer>.item")[0];
+
+            mask.style.display = "none";
+            editView.style.display = "none";
+
+
+            var id = doctor.querySelector(".idCard");
+            var name = doctor.querySelector(".name");
+            var sex = doctor.querySelector(".sex");
+            var phone = doctor.querySelector(".phone");
+            var age = doctor.querySelector(".age");
+
+            id.innerHTML = yid.value;
+            name.innerHTML = yname.value;
+            sex.innerHTML = ysex.value;
+            phone.innerHTML = yphone.value;
+            age.innerHTML = yage.value;
+    
+
+
+            $('.tableContainer')[0].prepend(doctor);
+            //数据库操作
+
+
+
+        })
+
+    })
+
 }

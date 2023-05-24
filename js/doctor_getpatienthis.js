@@ -12,7 +12,7 @@ window.onload = function () {
     
     var addBtn = document.querySelector("#add");
     addBtn.addEventListener("click", function () {
-        window.location.href = "patient_his_detail.html?type=0";
+        window.location.href = "doctor_zddan.html";
     })
 
 

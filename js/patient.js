@@ -11,10 +11,10 @@ window.onload = function () {
         window.location.href = "patient_guahao.html";
     })
     quyaojiaofei.addEventListener("click", function () {
-        window.location.href = "patient_quyaojiaofei.html";
+        window.location.href = "patient_his_detail.html";
     }
     )
     keshi.addEventListener("click", function () {
-        window.location.href = "patient_keshi.html";
+        window.location.href = "patient_keshidaohan.html";
     })
 }

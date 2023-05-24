@@ -36,12 +36,14 @@ body .container .wrap {
 body .container .wrap .title,
 body .container .wrap .item {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 body .container .wrap .title span,
 body .container .wrap .item span {
+  height: 100%;
   flex: 1;
 }
 body .container .wrap .title .idCard,

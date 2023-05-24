@@ -50,7 +50,7 @@ window.onload = function () {
             var yid = editView.querySelector("#yid");
             var yname = editView.querySelector("#yname");
             var ysex = editView.querySelector("#ysex");
-            var yage = editView.querySelector("#yage");
+
             var yphone = editView.querySelector("#yphone");
             var ypos = editView.querySelector("#ypos");
 
@@ -59,6 +59,7 @@ window.onload = function () {
             ysex.value = sex.innerHTML;
             yphone.value = phone.innerHTML;
             ypos.value = keshi.innerHTML;
+
 
             //获取弹窗中的取消按钮
             var cancel = editView.querySelector(".cancel");
@@ -78,7 +79,7 @@ window.onload = function () {
                 keshi.innerHTML = ypos.value;
 
                 //数据库操作
-                
+
             })
 
         })
@@ -94,4 +95,75 @@ window.onload = function () {
         })
     })
 
+    var addDoctor = $(".addDoctor")[0];
+    addDoctor.addEventListener("click", function () {
+        //弹窗显示和修改
+        mask.style.display = "block";
+        editView.style.display = "block";
+
+        //获取弹窗中的各项
+        var yid = editView.querySelector("#yid");
+        var yname = editView.querySelector("#yname");
+        var ysex = editView.querySelector("#ysex");
+        var yphone = editView.querySelector("#yphone");
+        var ypos = editView.querySelector("#ypos");
+
+
+        yid.disabled = false;
+        yid.style.background = 'transparent'
+        //获取弹窗中的取消按钮
+        var cancel = editView.querySelector(".cancel");
+        cancel.addEventListener("click", function () {
+            mask.style.display = "none";
+            editView.style.display = "none";
+        })
+
+        //获取弹窗中的确定按钮
+        var ok = editView.querySelector(".ok");
+        ok.addEventListener("click", function () {
+
+            //添加节点
+            var doctor = $(".tableContainer>.item")[0];
+
+            mask.style.display = "none";
+            editView.style.display = "none";
+
+            // var doctor=document.createElement()
+
+            //    var str = '<div class="item">'+
+            //             '<span>'+
+            //                 '<input type="checkbox" value="y" color="" placeholder="y"></input>'+
+            //             '</span>'+
+
+            //             +'<span class="idCard">'+yid.value+'</span>'
+            //             +'<span class="name">'+yname.value+'</span>'
+            //             +'<span class="sex">'+ysex.value+'</span>'
+            //             +'<span class="phone">'+yphone.value+'</span>'
+            //             +'<span class="keshi">'+ypos.value+'</span>'
+            //             +'<span class="edi">修改</span>'
+            //             +'<span class="del">删除</span>'
+            //         + '</div>'
+
+            var id = doctor.querySelector(".idCard");
+            var name = doctor.querySelector(".name");
+            var sex = doctor.querySelector(".sex");
+            var phone = doctor.querySelector(".phone");
+            var keshi = doctor.querySelector(".keshi");
+
+            id.innerHTML = yid.value;
+            name.innerHTML = yname.value;
+            sex.innerHTML = ysex.value;
+            phone.innerHTML = yphone.value;
+            keshi.innerHTML = ypos.value;
+
+
+            $('.tableContainer')[0].prepend(doctor);
+
+            //数据库操作
+
+
+
+        })
+
+    })
 }
